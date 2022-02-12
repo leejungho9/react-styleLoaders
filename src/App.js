@@ -1,22 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
+import StyledButton from './components/StyledButton';
+import styled from 'styled-components';
 
+
+const PrimaryStyledButton = styled(StyledButton)`
+background : palevioletred; 
+color:white;
+`;
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          <StyledButton>버튼</StyledButton>
+          <StyledButton primary>버튼</StyledButton>
+          <PrimaryStyledButton primary>버튼</PrimaryStyledButton>
+          <StyledButton as="a" href="/">버튼</StyledButton>
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        
       </header>
     </div>
   );
